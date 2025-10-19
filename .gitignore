@@ -20,5 +20,8 @@ __pycache__/
 *.pyc
 *.cpython-*.pyc
 
-
+# Django static files
 staticfiles/
+
+# PDF files in portfolio static directory e.g resume
+portfolio/static/portfolio/*.pdf
