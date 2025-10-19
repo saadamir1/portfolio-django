@@ -1,0 +1,19 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Experience - Saad Amir{% endblock %}
+
+{% block content %}
+<h1>Experience</h1>
+
+{% if experiences %}
+    {% for exp in experiences %}
+    <div class="item">
+        <h3>{{ exp.title }}</h3>
+        <p class="meta"><strong>{{ exp.company }}</strong> | {{ exp.start_date }} - {{ exp.end_date }}</p>
+        <div style="white-space: pre-line;">{{ exp.description }}</div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>No experience data. Add via <a href="/admin">admin panel</a>.</p>
+{% endif %}
+{% endblock %}

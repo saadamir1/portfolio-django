@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Skills - Saad Amir{% endblock %}
+
+{% block content %}
+<h1>Skills</h1>
+
+{% for category, skill_list in skills.items %}
+<div class="item">
+    <h3>{{ category }}</h3>
+    <div>
+        {% for skill in skill_list %}
+        <span class="tag">{{ skill }}</span>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

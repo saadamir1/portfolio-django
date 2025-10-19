@@ -1,0 +1,25 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Projects - Saad Amir{% endblock %}
+
+{% block content %}
+<h1>Projects</h1>
+
+{% if projects %}
+    {% for project in projects %}
+    <div class="item">
+        <h3>{{ project.title }}</h3>
+        <p class="meta">{{ project.tech_stack }}</p>
+        <div style="white-space: pre-line;">{{ project.description }}</div>
+        {% if project.github_link or project.live_link %}
+        <div style="margin-top: 0.5rem;">
+            {% if project.github_link %}<a href="{{ project.github_link }}" target="_blank">GitHub</a>{% endif %}
+            {% if project.live_link %}<a href="{{ project.live_link }}" target="_blank" style="margin-left: 1rem;">Live Demo</a>{% endif %}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% else %}
+    <p>No projects yet. Add via <a href="/admin">admin panel</a>.</p>
+{% endif %}
+{% endblock %}

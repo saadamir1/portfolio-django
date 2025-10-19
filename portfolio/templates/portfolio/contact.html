@@ -1,0 +1,32 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Contact - Saad Amir{% endblock %}
+
+{% block content %}
+<h1>Get In Touch</h1>
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    <label>Name</label>
+    <input type="text" name="name" required>
+    
+    <label>Email</label>
+    <input type="email" name="email" required>
+    
+    <label>Message</label>
+    <textarea name="message" rows="6" required></textarea>
+    
+    <button type="submit">Send Message</button>
+</form>
+
+<div style="margin-top: 2rem;">
+    <p><strong>Email:</strong> Saadamir070@gmail.com</p>
+    <p><strong>Phone:</strong> 0321 6256107</p>
+</div>
+{% endblock %}
