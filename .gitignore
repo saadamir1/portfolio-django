@@ -23,5 +23,5 @@ __pycache__/
 # Django static files
 staticfiles/
 
-# PDF files in portfolio static directory e.g resume
-portfolio/static/portfolio/*.pdf
+# # PDF files in portfolio static directory e.g resume
+# portfolio/static/portfolio/*.pdf
