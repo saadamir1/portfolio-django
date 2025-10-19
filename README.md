@@ -1,4 +1,4 @@
-# Portfolio Website
+# Django Portfolio Website
 
 A clean, professional portfolio website built with Django to showcase my work experience, projects, and skills.
 
